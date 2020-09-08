@@ -1,0 +1,35 @@
+@import '../../../assets/css/global.less';
+
+.grid {
+    display: grid;
+    gap: calc(var(--gap) * 1rem);
+
+
+    @media screen and (max-width: @breakpoint){
+        grid-template-columns: auto !important;
+        grid-template-rows: auto !important;
+        &>* {
+            grid-area: auto !important;
+        }
+    }
+
+    &.area {
+        grid-template-areas: var(--templateArea, auto);
+    }
+
+    &.column {
+        grid-template-columns: repeat(var(--columnCount), minmax(0, 1fr));
+    }
+    
+    &.row {
+        grid-template-rows: repeat(var(--rowCount), minmax(0, 1fr));
+    }
+
+    &.templateColumns {
+        grid-template-columns: var(--templateColumns, auto);
+    }
+
+    &.templateRows {
+        grid-template-rows: var(--templateRows, auto);
+    }
+}

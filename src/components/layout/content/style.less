@@ -1,0 +1,21 @@
+@import '../../../assets/css/global.less';
+
+.content {
+    padding: 10rem 20rem;
+    height: 100%;
+    background: #f9f9f9;
+    overflow: auto;
+}
+
+.normalFilter {
+    @media screen and (max-width: @breakpoint) {
+        display: none;
+    }
+}
+
+.mobileFilter {
+    display: none;
+    @media screen and (max-width: @breakpoint) {
+        display: initial;
+    }
+}

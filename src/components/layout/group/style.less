@@ -1,0 +1,24 @@
+.Group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    &>*:not(:last-child) {
+        margin-right: calc(var(--gap) * 1rem);
+    }
+}
+.HGroup {
+    &:extend(.Group);
+    flex-flow: row nowrap;
+    &>*:not(:last-child) {
+        margin-right: calc(var(--gap) * 1rem);
+    }
+}
+
+.VGroup {
+    &:extend(.Group);
+    flex-flow: column nowrap;
+    &>*:not(:last-child) {
+        margin-bottom: calc(var(--gap) * 1rem);
+    }
+}
