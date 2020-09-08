@@ -1,0 +1,5 @@
+{
+    "development": "",
+    "qa": "//qa-ual.shuyun.com",
+    "production": "//ual.shuyun.com"
+}

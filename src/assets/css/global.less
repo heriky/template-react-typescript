@@ -1,0 +1,94 @@
+@breakpoint: 800px;
+
+ul,li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.scroll-bar {
+    // scrollbar-width: thin; 此选项会引起火狐浏览器下antd的table组件的漂移现象。
+    &::-webkit-scrollbar-track {
+      border-radius: 5rem;
+      background-color: #f3f3f3;
+    }
+  
+    &::-webkit-scrollbar-track-piece {
+      display: block;
+    }
+  
+    &::-webkit-scrollbar {
+      display: block;
+      position: fixed;
+      background: transparent;
+      width: 10rem;
+      height: 10rem;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5rem;
+      background-color: #e1e1e1;
+      width: 6rem;
+      height: 6rem;
+      border: 2rem solid transparent;
+      background-clip: content-box;
+    }
+  }
+
+.main-container {
+    * {
+        .scroll-bar;
+        box-sizing: border-box;
+        font-family: Microsoft YaHei, sans-serif;
+    }
+
+    &:extend(.scroll-bar all);
+
+    .common-link {
+        color: #1890ff;
+        cursor: pointer;
+    }
+    .main-content {
+        margin-top: 60rem;
+        height: calc(100vh - 60rem);
+        overflow: auto;
+    }
+
+    .accent-color {
+        color: #1890ff;
+    }
+    .warn-color {
+      color: #faad14;
+    }
+    .error-color {
+      color: #cf2f30;
+    }
+
+
+    .bold-text {
+      font-weight: 700;
+    }
+
+    .error-text{
+      .error-color;
+      .bold-text;
+    }
+    .warn-text {
+      .warn-color;
+      .bold-text;
+    }
+    .accent-text {
+      .accent-color;
+      .bold-text;
+    }
+
+    .card-item {
+        box-shadow: 0 0 6rem #bbb;
+    }
+
+    .pc-sidebar {
+      @media screen and (max-width: @breakpoint){
+          display: none;
+      }
+    }
+}

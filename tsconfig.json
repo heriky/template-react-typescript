@@ -1,0 +1,40 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowSyntheticDefaultImports": true,
+		"experimentalDecorators": true,
+		"moduleResolution": "node",
+		"module": "esnext",
+		"emitDecoratorMetadata": true,
+		// "checkJs": true,
+		// "allowJs": true,
+		"jsx": "react",
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"resolveJsonModule": true,
+		"baseUrl": ".",
+		"strictNullChecks": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"downlevelIteration": true,
+		"paths": {
+			"@utils": ["./src/utils"],
+			"@utils/*": ["./src/utils/*"],
+			"@components/*": ["./src/components/*"],
+			"@constants": ["./src/constants"],
+			"@constants/*": ["./src/constants/*"],
+			"@assets/*": ["./src/assets/*"],
+			"@commons/*": ["./src/commons/*"],
+			"@http": ["./src/common/http"],
+			"@stores/*": ["./src/stores/*"],
+			"@hooks/*": ["./src/hooks/*"],
+			"@hooks": ["./src/hooks"],
+			"@routes": ["./src/routes"],
+			"@routes/*": ["./src/routes/*"]
+		}
+	},
+	"include": ["src", "typings", "service-worker.ts"]
+}
